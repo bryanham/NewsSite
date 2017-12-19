@@ -1,0 +1,105 @@
+<html>
+<head>
+  <title>Bryan's News Bulletin</title>
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    <!-- jQuery library -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/journal/bootstrap.min.css"></link>    <!--Bootstrap theme -->
+  <script type="text/javascript" src="js/guardian-min.js"></script>   <!-- minified link to ajax calls -->
+  <link rel="stylesheet" type="text/css" href="css/styles-min.css"></link>     <!--minified style css -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">   <!--fixes special characters -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>    <!--icons -->
+</head>
+
+<body>
+  <div class="jumbotron">
+  <h1 class="display-3">Bryan's News Bulletin</h1>    <!--page title -->
+  <p>All the Latest News.</p>
+  <nav class="weather">   <!--placeholder for weather -->
+  </nav>
+</div>
+
+<div class="container">
+    <ul class="nav nav-tabs nav-justified sticky-top" style="background-color: #ffffff">   <!--Nav bar containing each section -->
+      <li class="nav-item border-primary"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+      <li class="nav-item"><a href="#world" role="tab" data-toggle="tab">World</a></li>
+      <li class="nav-item"><a href="#politics" role="tab" data-toggle="tab">Politics</a></li>
+      <li class="nav-item"><a href="#technology" role="tab" data-toggle="tab">Technology</a></li>
+      <li class="nav-item"><a href="#science" role="tab" data-toggle="tab">Science</a></li>
+      <li class="nav-item"><a href="#culture" role="tab" data-toggle="tab">Entertainment</a></li>
+    </ul>
+      <form class="nav-bar form" role="search">   <!--creating searchbar -->
+        <div class="input-group">
+          <input type="text" class="form-control" id="search" placeholder="Search..." name="searchbar"  data-toggle="tooltip" data-placement="top" title="Search using keywords and use the 'Clear' button to start a new search!">  <!--tooltip help -->
+          <div class="input-group-btn">
+            <button class="btn btn-primary" id="searchBtn" type="submit"><i class="fa fa-search"></i></button>    <!--search button -->
+          </div>
+          <div class="clear">
+            <button class="btn btn-secondary" id="clearSearch">Clear</button>   <!--Clear button -->
+          </div>
+        </div>
+        <div class="listPlaceholder">   <!--placeholder for search items -->
+        </div>
+      </form>
+
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="home">    <!--active pane on load -->
+    <h1>Most Popular</h1>
+    <div id="newsCarousel" class="carousel slide" data-ride="carousel">   <!--carousel for most popular news -->
+      <ol class="carousel-indicators">
+        <li data-target="#newsCarousel" data-slide-to="0" class="active"></li>    <!--icons for each articile in carousel -->
+        <li data-target="#newsCarousel" data-slide-to="1"</li>
+        <li data-target="#newsCarousel" data-slide-to="2"</li>
+        <li data-target="#newsCarousel" data-slide-to="3"</li>
+        <li data-target="#newsCarousel" data-slide-to="4"</li>
+      </ol>
+      <div class="carousel-inner" role="listbox">   <!--placeholder for carousel data in ajax call -->
+      </div>
+      <a class="carousel-control-prev" href="#newsCarousel" role="button" data-slide="prev">    <!--button to move to previous slide -->
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#newsCarousel" role="button" data-slide="next">    <!--button to move to next slide -->
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="modalPlaceholder">   <!--placeholder for modal data in ajax call -->
+    </div>
+</div>
+
+<div role="tabpanel" class="tab-pane" id="world">    <!-- tab for world news -->
+  <h1>World</h1>
+  <div class="card-columns" id="worldCard">
+  </div>
+</div>
+
+<div role="tabpanel" class="tab-pane" id="politics">   <!--tab for policitcs news -->
+  <h1>Politics</h1>
+  <div class="card-columns" id="politicsCard">
+  </div>
+</div>
+
+<div role="tabpanel" class="tab-pane" id="technology">   <!--tab for techology news -->
+  <h1>Technology</h1>
+  <div class="card-columns" id="technologyCard">
+  </div>
+</div>
+
+<div role="tabpanel" class="tab-pane" id="science">    <!--tab for science news -->
+  <h1>Science</h1>
+  <div class="card-columns" id="scienceCard">
+  </div>
+</div>
+
+<div role="tabpanel" class="tab-pane " id="culture">   <!--tab for entertainment news -->
+  <h1>Entertainment</h1>
+  <div class="card-columns" id="cultureCard">
+  </div>
+</div>
+
+</div>
+</div>
+</body>
+</html>

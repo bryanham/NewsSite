@@ -1,0 +1,37 @@
+/*centering carousel and changing width */
+.carousel
+{
+  padding-bottom: 20px;
+  width: 800px;
+  margin: 0 auto;
+}
+
+/*carousel button background */
+.carousel-control-prev-icon, .carousel-control-next-icon
+{
+  background-color: black;
+}
+/*image to stay inside modal */
+.gu-image
+{
+  height: auto;
+  width: 100%;
+}
+/*add padding on top for scrolling */
+.nav
+{
+  padding-top: 10px;
+}
+
+/*increasing modal width */
+.modal-content
+{
+  width: 150%;
+  margin-left: -20%;
+}
+
+/* search results */
+.list-group-item
+{
+  display: inline-block;
+}
